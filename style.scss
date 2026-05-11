@@ -1,0 +1,197 @@
+
+// Variables
+    // Color variables
+    $black: #1C232B;
+    $grey: #6C7289;
+    $cream: #F2EAE2;
+    $white: #FFFFFF;
+    $green500: #3D8168;
+    $green700: #1A4032;
+
+    // Typography presets
+    $text-preset-1: 700 3.2rem/100% 'Fraunces', sans-serif;
+    $text-preset-2: 700 1.4rem/110% 'Montserrat', sans-serif;
+    $text-preset-3: 500 1.4rem/160% 'Montserrat', sans-serif;
+    $text-preset-4: 500 1.2rem/120% 'Montserrat', sans-serif;
+    $text-preset-5: 500 1.3rem/120% 'Montserrat', sans-serif;
+    $text-preset-4-spacing: 5px;
+
+    // Gap variables
+    $gap500: 40px;
+    $gap400: 32px;
+    $gap300: 24px;
+    $gap200: 16px;
+    $gap100: 8px;
+    $gap50: 4px;
+
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url("./fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf") format("truetype");
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("./fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $cream;
+    letter-spacing: 0;
+}
+
+.card-container {
+    width: clamp(325px, 93%, 500px);
+    height: auto;
+    background-color: $white;
+    border-radius: 8px;
+}
+
+.img-mobile {
+    display: block;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.img-desktop {
+    display: none;
+}
+
+@mixin setup-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: $gap300;
+}
+
+.card-content-container {
+    @include setup-container;
+    padding: $gap400;
+}
+
+.card-text-container {
+    @include setup-container;
+}
+
+.product-category {
+    font: $text-preset-4;
+    letter-spacing: $text-preset-4-spacing;
+    color: $grey;
+    text-transform: uppercase;
+}
+
+.product-title {
+    font: $text-preset-1;
+    color: $black;
+}
+
+.product-desc {
+    font: $text-preset-3;
+    color: $grey;
+}
+
+.card-pricing-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: $gap200;
+}
+
+.product-price-big {
+    font: $text-preset-1;
+    color: $green500;
+}
+
+.product-price-small {
+    font: $text-preset-5;
+    color: $grey;
+    text-decoration:  line-through;
+}
+
+.btn {
+    background-color: $green500;
+    color: $white;
+    width: 100%;
+    height: auto;
+    padding: $gap200 $gap400;
+    border-radius: 8px;
+    border: none;
+    font: $text-preset-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap100;
+
+    img {
+        transform: translateY(-1px);
+    }
+}
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: clamp(62.5%, 1.3vw, 0.8rem);
+    }
+
+    .card-container {
+        width: clamp(550px, 80%, 800px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-desktop {
+        display: block;
+        width: 50%;
+        height: auto;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .card-content-container {
+        gap: $gap400;
+        padding: $gap400;
+    }  
+}
+
+@media (min-width: 1440px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    .card-container {
+        width: clamp(550px, 80%, 800px);
+    }
+
+    .btn {
+        transition: background-color 0.3s ease-out;
+
+        &:hover {
+            background-color: $green700;
+            transition: background-color 0.05s ease-in;
+        }
+    }
+}
+    
