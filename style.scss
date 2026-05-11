@@ -17,12 +17,12 @@
     $text-preset-4-spacing: 5px;
 
     // Gap variables
-    $gap500: 40px;
-    $gap400: 32px;
-    $gap300: 24px;
-    $gap200: 16px;
-    $gap100: 8px;
-    $gap50: 4px;
+    $gap500: 4.0rem;
+    $gap400: 3.2rem;
+    $gap300: 2.4rem;
+    $gap200: 1.6rem;
+    $gap100: 0.8rem;
+    $gap50: 0.4rem;
 
 
 @font-face {
@@ -155,6 +155,8 @@ body {
     &:focus-visible {
         background-color: $green700;
         transition: background-color 0.05s ease-in;
+        outline: 4px dashed black;
+        outline-offset: 2px;
     }
 }
 

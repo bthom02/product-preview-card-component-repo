@@ -58,8 +58,8 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 32px;
+  gap: 2.4rem;
+  padding: 3.2rem;
 }
 
 .card-text-container {
@@ -67,7 +67,7 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 2.4rem;
 }
 
 .product-category {
@@ -91,7 +91,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1.6rem;
 }
 
 .product-price-big {
@@ -110,14 +110,14 @@ body {
   color: #FFFFFF;
   width: 100%;
   height: auto;
-  padding: 16px 32px;
+  padding: 1.6rem 3.2rem;
   border-radius: 8px;
   border: none;
   font: 700 1.4rem/110% "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.8rem;
 }
 .btn img {
   transform: translateY(-1px);
@@ -125,6 +125,8 @@ body {
 .btn:focus-visible {
   background-color: #1A4032;
   transition: background-color 0.05s ease-in;
+  outline: 4px dashed black;
+  outline-offset: 2px;
 }
 
 @media (min-width: 768px) {
@@ -153,8 +155,8 @@ body {
     border-radius: 8px 0 0 8px;
   }
   .card-content-container {
-    gap: 32px;
-    padding: 32px;
+    gap: 3.2rem;
+    padding: 3.2rem;
     width: 50%;
   }
 }
