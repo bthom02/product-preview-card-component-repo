@@ -173,18 +173,11 @@ body {
     .card-content-container {
         gap: $gap400;
         padding: $gap400;
+        width: 50%;
     }  
 }
 
 @media (min-width: 1440px) {
-    html {
-        font-size: 0.8rem;
-    }
-
-    .card-container {
-        width: clamp(550px, 80%, 800px);
-    }
-
     .btn {
         transition: background-color 0.3s ease-out;
 

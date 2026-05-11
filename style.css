@@ -138,15 +138,10 @@ body {
   .card-content-container {
     gap: 32px;
     padding: 32px;
+    width: 50%;
   }
 }
 @media (min-width: 1440px) {
-  html {
-    font-size: 0.8rem;
-  }
-  .card-container {
-    width: clamp(550px, 80%, 800px);
-  }
   .btn {
     transition: background-color 0.3s ease-out;
   }
