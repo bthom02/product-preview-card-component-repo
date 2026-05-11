@@ -34,13 +34,18 @@ body {
   height: auto;
   background-color: #FFFFFF;
   border-radius: 8px;
+}
+
+.image-container {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
   overflow: hidden;
 }
 
 .img-mobile {
   display: block;
   width: 100%;
-  border-radius: 8px 8px 0 0;
 }
 
 .img-desktop {
@@ -131,12 +136,18 @@ body {
     flex-direction: row;
     align-items: center;
   }
+  .image-container {
+    width: 50%;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+    overflow: hidden;
+  }
   .img-mobile {
     display: none;
   }
   .img-desktop {
     display: block;
-    width: 50%;
+    width: 100%;
     height: auto;
     border-radius: 8px 0 0 8px;
   }
