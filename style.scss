@@ -144,6 +144,11 @@ body {
     img {
         transform: translateY(-1px);
     }
+
+    &:focus-visible {
+        background-color: $green700;
+        transition: background-color 0.05s ease-in;
+    }
 }
 
 
